@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881BBFB41FE2A84200E68E27 /* JPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 881BBFB21FE2A84200E68E27 /* JPoint.cpp */; };
 		881E495C1FDEFB8B00381B16 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 881E495B1FDEFB8B00381B16 /* main.cpp */; };
+		881E49641FDEFBA400381B16 /* libntl.35.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 881E49631FDEFBA400381B16 /* libntl.35.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		881BBFB21FE2A84200E68E27 /* JPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JPoint.cpp; sourceTree = "<group>"; };
+		881BBFB31FE2A84200E68E27 /* JPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JPoint.hpp; sourceTree = "<group>"; };
 		881E49581FDEFB8B00381B16 /* crypt03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = crypt03; sourceTree = BUILT_PRODUCTS_DIR; };
 		881E495B1FDEFB8B00381B16 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		881E49631FDEFBA400381B16 /* libntl.35.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libntl.35.dylib; path = ../../../../../../usr/local/Cellar/ntl/10.5.0/lib/libntl.35.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881E49641FDEFBA400381B16 /* libntl.35.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				881E495A1FDEFB8B00381B16 /* crypt03 */,
 				881E49591FDEFB8B00381B16 /* Products */,
+				881E49621FDEFBA400381B16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				881E495B1FDEFB8B00381B16 /* main.cpp */,
+				881BBFB31FE2A84200E68E27 /* JPoint.hpp */,
+				881BBFB21FE2A84200E68E27 /* JPoint.cpp */,
 			);
 			path = crypt03;
+			sourceTree = "<group>";
+		};
+		881E49621FDEFBA400381B16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				881E49631FDEFBA400381B16 /* libntl.35.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881BBFB41FE2A84200E68E27 /* JPoint.cpp in Sources */,
 				881E495C1FDEFB8B00381B16 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +238,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = UQ4JTX9RTT;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/ntl/10.5.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/Cellar/ntl/10.5.0/include;
 			};
 			name = Debug;
 		};
@@ -228,7 +251,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = UQ4JTX9RTT;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/ntl/10.5.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/Cellar/ntl/10.5.0/include;
 			};
 			name = Release;
 		};
@@ -251,6 +279,7 @@
 				881E49611FDEFB8B00381B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
